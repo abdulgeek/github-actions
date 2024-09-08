@@ -1,0 +1,18 @@
+# Its a name of a work flow
+name: First Workflow
+
+#  Its a event on what/when should dispatch the event
+on: workflow_dispatch # it means it wait for manual trigger
+
+# Jobs are sets of steps that execute on the same runner. By default, a workflow with multiple jobs will run those jobs in parallel.
+jobs:
+  first-job: # job name
+    # Runner: A runner is a server that has the GitHub Actions runner application installed. It waits for available jobs and runs them one at a time, reporting the progress, logs, and results back to GitHub.
+    runs-on: ubuntu-latest # server
+    steps:
+      - name: Print the hello world # step name
+        run: echo "Hello World!"
+      - name: Print bye bye 
+        run: echo "Ba Bye"
+            
+    
